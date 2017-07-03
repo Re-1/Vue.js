@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ctvrty</title>
+  </head>
+  <body>
+    <div id="app">
+      <p v-if="show">Now you see me. <span>Hello!</span></p>
+      <p v-else>You can see me.</p>
+      <p v-show="show">Can you see me, too?</p>
+      <button type="button" name="button" @click="show = !show">Switch</button>
+      <template v-if="show">
+        <h1>Heading.</h1>
+        <p>Inside template.</p>
+      </template>
+    </div>
+
+    <script src="vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

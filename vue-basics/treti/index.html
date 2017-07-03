@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Třetí</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+    <h1> {{ title }} </h1>
+    <p v-on:mousemove="positions">
+    coordinates: {{ y }} / {{ x }}
+    </p>
+    <input type="text" v-on:keyup.enter.space="alertMe"><br />
+    <button v-on:click="counter++">Increase</button>
+    <button v-on:click="counter--">Decrease</button>
+    <p>
+    {{ counter }}
+    </p>
+      <div class="demo" @click="attachRed = !attachRed" :class="{red: attachRed}"></div>
+      <div class="demo" :style="{backgroundColor: color}"></div>
+      <div class="demo" :class="color"></div>
+      <hr>
+      <input type="text" v-model="color">
+      </div>
+
+    <script src="vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

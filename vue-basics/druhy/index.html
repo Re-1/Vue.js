@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Druhý</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1> {{ title }} </h1>
+      <button type="button" v-on:click="increaseMe(parseInt(10))">Click Me</button>
+      <button type="button" v-on:click="counter++">Click Me</button>
+      <p>{{ counter * 2 > 10 ? 'Greater than 10' : 'Smaller than 10' }}</p>
+      <p v-on:mousemove="itMoves">Coordinates: {{ x }} / {{ y }} <span v-on:mousemove.stop=""> Dead End</span></p>
+      <input type="text" v-on:keyup.enter.space="alertMe" value="type...">
+    </div>
+
+    <script src="vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
